@@ -8,7 +8,7 @@ URL : https://progrm-github.github.io/AMADEUS_JAVASCRIPT-2/amadeus.html
 
 사용 가능 커맨드
 
-クリスティーナ　(크리스티나)
+クリスティーナ　(크리스티나)<br>
 お願い (오네가이)
 
 # 日本語
@@ -19,5 +19,5 @@ URL : https://progrm-github.github.io/AMADEUS_JAVASCRIPT-2/amadeus.html
 
 認識可能コマンド
 
-クリスティーナ　（ｃｈｒｉｓｔｉｎａ）
+クリスティーナ　（ｃｈｒｉｓｔｉｎａ）<br>
 お願い　（ｏｎｅｇａｉ）
