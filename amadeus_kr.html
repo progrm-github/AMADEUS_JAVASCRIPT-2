@@ -1,0 +1,99 @@
+<html>
+<style>
+    .button {
+        background-color: #465183;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-family: "noto";
+        font-size: 16px;
+    }
+
+    body {
+        background-image: url('2133460020.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "noto";
+    }
+    a:link { color: rgb(116, 159, 240); text-decoration: none;}
+    a:visited { color: black; text-decoration: none;}
+    a:hover { color: rgb(116, 159, 240); text-decoration: underline;}
+    @font-face {
+    src : url("NotoSansKR-Medium.otf");
+    font-family: "noto"
+    }
+</style>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+        AMADEUS
+    </title>
+</head>
+
+<body>
+    <a href='amadeus.html'><img src="제목을-입력해주세요.-001 (3).png" width="300" /></a>
+    <center>
+        <br><br>
+        <img src="kurisu_normal1.png" width="200" /><br><br>
+        <div id="q" style="color:white;">질문 : </div><br>
+        <div id="a" style="color:white;">답변 : </div>
+        <br><input type="button" class="button" value="말하기" onclick="new Audio('back_style_3_003.wav').play();speak()" /><br>
+        <footer>
+          <p style="color:white; font-size: small;">Copyright © 2021 <a href="mailto: jmjeong10@Gmail.com" title="Contact Progrm">Progrm</a> All rights reserved.</p>
+          <p style="color:white; font-size: small;"><a href="https://github.com/progrm-github/AMADEUS_JAVASCRIPT-2">Github Repository</a></p>
+      </footer>
+    </center>
+</body>
+<script src="annyang_kr.js"></script>
+<script>
+    if (annyang) {
+        function speak() {
+            annyang.start({ autoRestart: false, continuous: false });
+            var recognition = annyang.getSpeechRecognizer();
+            var final_transcript = '';
+            recognition.interimResults = true;
+            recognition.onresult = function(event) {
+                var interim_transcript = '';
+                final_transcript = '';
+                for (var i = event.resultIndex; i < event.results.length; ++i) {
+                    if (event.results[i].isFinal) {
+                        final_transcript += event.results[i][0].transcript;
+                        console.log("final_transcript=" + final_transcript);
+                    } else {
+                        interim_transcript += event.results[i][0].transcript;
+                        console.log("interim_transcript=" + interim_transcript);
+                    }
+                }
+                var getTagId = document.getElementById("q");
+                document.getElementById("q").innerHTML = "질문 : " + final_transcript;
+                if (final_transcript == '') {
+                    return;
+                }
+                else {
+                if (final_transcript == "크리스티나") {
+                    new Audio('christina.mp3').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "답변 : 크리스티나?";
+                } else if (final_transcript == "부탁해") {
+                    new Audio('daga_kotowaru.ogg').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "답변 : 하지만 거절한다.";
+                } else {
+                    new Audio('sorry.ogg').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "답변 : 죄송합니다. 데이터베이스에서 답변을 찾아낼 수 없습니다.";
+                }
+            }
+            };
+
+
+        }
+    }
+</script>
+
+</html>
