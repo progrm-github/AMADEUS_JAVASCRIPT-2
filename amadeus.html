@@ -52,11 +52,14 @@ if (annyang) {
             }
         }
         var getTagId = document.getElementById("q");document.getElementById("q").innerHTML = "質問 : " + final_transcript;
-        if (final_transcript = "クリスティーナ") {
+        if (final_transcript == "クリスティーナ") {
           annyang.abort();new Audio('christina.mp3').play();var getTagId = document.getElementById("a");document.getElementById("a").innerHTML = "答え : クリスティーナ?";
         }
-        else if (final_transcript = "お願い") {
+        else if (final_transcript == "お願い") {
           annyang.abort();new Audio('daga_kotowaru.ogg').play();var getTagId = document.getElementById("a");document.getElementById("a").innerHTML = "答え : だが断る。";
+        }
+        else {
+          annyang.abort();new Audio('sorry.ogg').play();var getTagId = document.getElementById("a");document.getElementById("a").innerHTML = "答え : ごめんなさい。データベースから答えを見つけられません。";
         }
     };
 
