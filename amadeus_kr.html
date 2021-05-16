@@ -86,10 +86,26 @@
                     new Audio('daga_kotowaru.ogg').play();
                     var getTagId = document.getElementById("a");
                     document.getElementById("a").innerHTML = "답변 : 하지만 거절한다.";
+                } else if (final_transcript == "헬로우") {
+                    new Audio('hello.ogg').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "답변 : Hello";
+                } else if (final_transcript == "헬로") {
+                    new Audio('hello.ogg').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "답변 : Hello";
+                } else if (final_transcript == "무엇을 할 수 있어") {
+                    new Audio('ask_me_whatever.ogg').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "답변 : 어떤 것이라도 물어봐주세요, 가능한 범위 내에서 대답해드릴게요.";
+                } else if (final_transcript == "타임머신은 가능할까") {
+                    new Audio('tm_not_possible.ogg').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "답변 : 그렇네요, 결론부터 이야기하자면 타임머신은 가능하지 않아...";
                 } else {
                     new Audio('sorry.ogg').play();
                     var getTagId = document.getElementById("a");
-                    document.getElementById("a").innerHTML = "답변 : 죄송합니다. 데이터베이스에서 답변을 찾아낼 수 없습니다.";
+                    document.getElementById("a").innerHTML = "답변 : 죄송합니다, 데이터베이스에서 답변을 찾아낼 수 없습니다.";
                 }
             }
             };

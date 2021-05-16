@@ -78,7 +78,7 @@
                     return;
                 }
                 else {
-                if (final_transcript == "クリスティーナ") {
+                  if (final_transcript == "クリスティーナ") {
                     new Audio('christina.mp3').play();
                     var getTagId = document.getElementById("a");
                     document.getElementById("a").innerHTML = "答え : クリスティーナ?";
@@ -86,6 +86,18 @@
                     new Audio('daga_kotowaru.ogg').play();
                     var getTagId = document.getElementById("a");
                     document.getElementById("a").innerHTML = "答え : だが断る。";
+                } else if (final_transcript == "ハロー") {
+                    new Audio('hello.ogg').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "答え : Hello";
+                } else if (final_transcript == "何ができる") {
+                    new Audio('ask_me_whatever.ogg').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "答え : どんなことでも聞いてください、可能な範囲でお答えしますから。";
+                } else if (final_transcript == "タイムマシンは可能かどうか") {
+                    new Audio('tm_not_possible.ogg').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "答え : そうですね、結論から言ってしまうとタイムマシンは可能ではない。";
                 } else {
                     new Audio('sorry.ogg').play();
                     var getTagId = document.getElementById("a");
