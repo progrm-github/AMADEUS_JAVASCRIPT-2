@@ -17,7 +17,7 @@ URL : https://progrm-github.github.io/AMADEUS_JAVASCRIPT-2/amadeus.html
 
 URL : https://progrm-github.github.io/AMADEUS_JAVASCRIPT-2/amadeus.html
 
-認識可能コマンド
+使用可能コマンド
 
 クリスティーナ　（ｃｈｒｉｓｔｉｎａ）<br>
 お願い　（ｏｎｅｇａｉ）
