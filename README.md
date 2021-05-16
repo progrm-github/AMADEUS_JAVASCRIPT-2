@@ -8,8 +8,8 @@ URL : https://progrm-github.github.io/AMADEUS_JAVASCRIPT-2/amadeus_kr.html
 
 사용 가능 커맨드
 
-크리스티나 <br>
-부탁해
+* 크리스티나 <br>
+* 부탁해
 
 # 日本語
 
@@ -19,5 +19,5 @@ URL : https://progrm-github.github.io/AMADEUS_JAVASCRIPT-2/amadeus.html
 
 使用可能コマンド
 
-クリスティーナ <br>
-お願い
+* クリスティーナ <br>
+* お願い
