@@ -1,69 +1,83 @@
+<html>
 <style>
-  .button {
-  background-color: #465183;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-  body{
-    background-image : url('2133460020.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+    .button {
+        background-color: #465183;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    body {
+        background-image: url('2133460020.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 </style>
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8">
-<title>
-  AMADEUS
-</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+        AMADEUS
+    </title>
 </head>
-<center>
-<br><br>
-<img src="kurisu_normal1.png" width="200" /><br><br>
-<div id="q" style="color:white;">質問 : </div><br>
-<div id="a" style="color:white;">答え : </div>
-</center>
-<center>
-<br><input type="button" class="button" value="話す" onclick="new Audio('back_style_3_003.wav').play();speak()"/>
-</center>
+
+<body>
+    <center>
+        <br><br>
+        <img src="kurisu_normal1.png" width="200" /><br><br>
+        <div id="q" style="color:white;">質問 : </div><br>
+        <div id="a" style="color:white;">答え : </div>
+        <br><input type="button" class="button" value="話す" onclick="new Audio('back_style_3_003.wav').play();speak()" />
+    </center>
+</body>
 <script src="annyang.js"></script>
 <script>
-if (annyang) {
-  function speak() {
-  annyang.start();
-  var recognition = annyang.getSpeechRecognizer();
-    var final_transcript = '';
-    recognition.interimResults = true;
-    recognition.onresult = function(event) {
-        var interim_transcript = '';
-        final_transcript = '';
-        for (var i = event.resultIndex; i < event.results.length; ++i) {
-            if (event.results[i].isFinal) {
-                final_transcript += event.results[i][0].transcript;
-                console.log("final_transcript="+final_transcript);
-            } else {
-                interim_transcript += event.results[i][0].transcript;
-                console.log("interim_transcript="+interim_transcript);
-            }
-        }
-        var getTagId = document.getElementById("q");document.getElementById("q").innerHTML = "質問 : " + final_transcript;
-        if (final_transcript == "クリスティーナ") {
-          annyang.abort();new Audio('christina.mp3').play();var getTagId = document.getElementById("a");document.getElementById("a").innerHTML = "答え : クリスティーナ?";
-        }
-        else if (final_transcript == "お願い") {
-          annyang.abort();new Audio('daga_kotowaru.ogg').play();var getTagId = document.getElementById("a");document.getElementById("a").innerHTML = "答え : だが断る。";
-        }
-        else {
-          annyang.abort();new Audio('sorry.ogg').play();var getTagId = document.getElementById("a");document.getElementById("a").innerHTML = "答え : ごめんなさい。データベースから答えを見つけられません。";
-        }
-    };
+    if (annyang) {
+        function speak() {
+            annyang.start();
+            var recognition = annyang.getSpeechRecognizer();
+            var final_transcript = '';
+            recognition.interimResults = true;
+            recognition.onresult = function(event) {
+                var interim_transcript = '';
+                final_transcript = '';
+                for (var i = event.resultIndex; i < event.results.length; ++i) {
+                    if (event.results[i].isFinal) {
+                        final_transcript += event.results[i][0].transcript;
+                        console.log("final_transcript=" + final_transcript);
+                    } else {
+                        interim_transcript += event.results[i][0].transcript;
+                        console.log("interim_transcript=" + interim_transcript);
+                    }
+                }
+                var getTagId = document.getElementById("q");
+                document.getElementById("q").innerHTML = "質問 : " + final_transcript;
+                if (final_transcript == "クリスティーナ") {
+                    annyang.abort();
+                    new Audio('christina.mp3').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "答え : クリスティーナ?";
+                } else if (final_transcript == "お願い") {
+                    annyang.abort();
+                    new Audio('daga_kotowaru.ogg').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "答え : だが断る。";
+                } else {
+                    annyang.abort();
+                    new Audio('sorry.ogg').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "答え : ごめんなさい。データベースから答えを見つけられません。";
+                }
+            };
 
 
-  }
-}
+        }
+    }
 </script>
+
+</html>
