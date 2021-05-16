@@ -4,7 +4,7 @@
 
 게임 슈타인즈 게이트에 나오는 AI 아마데우스를 컨셉으로 하는 음성비서 시스템
 
-URL : https://progrm-github.github.io/AMADEUS_JAVASCRIPT-2/amadeus_kr.html
+URL : https://progrm-github.github.io/AMADEUS_JAVASCRIPT-2/
 
 사용 가능 커맨드
 
@@ -15,7 +15,7 @@ URL : https://progrm-github.github.io/AMADEUS_JAVASCRIPT-2/amadeus_kr.html
 
 ゲームシュタインズ・ゲートに出るAIアマデウスをコンセプトにする音声秘書システム
 
-URL : https://progrm-github.github.io/AMADEUS_JAVASCRIPT-2/amadeus.html
+URL : https://progrm-github.github.io/AMADEUS_JAVASCRIPT-2/
 
 使用可能コマンド
 
