@@ -1,6 +1,6 @@
 <style>
   .button {
-  background-color: #465183; /* Green */
+  background-color: #465183;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -32,15 +32,12 @@
 <script src="annyang.js"></script>
 <script>
 if (annyang) {
-  // Let's define a command.
   const commands = {
     'クリスティーナ': () => { annyang.abort();new Audio('christina.mp3').play();var getTagId = document.getElementById("q");document.getElementById("q").innerHTML = "質問 : クリスティーナ";var getTagId = document.getElementById("a");document.getElementById("a").innerHTML = "答え : クリスティーナ?"; },
     'お願い': () => { annyang.abort();new Audio('daga_kotowaru.ogg').play();var getTagId = document.getElementById("q");document.getElementById("q").innerHTML = "質問 : お願い";var getTagId = document.getElementById("a");document.getElementById("a").innerHTML = "答え : だが断る。";  }
   };
 
-  // Add our commands to annyang
   annyang.addCommands(commands);
-  // Start listening.
   function speak() {
   annyang.start();
   }
