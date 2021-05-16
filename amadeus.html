@@ -29,19 +29,38 @@
 <div id="a" style="color:white;">答え : </div>
 </center>
 <center>
-<br><input type="button" class="button" value="話す" onclick="speak()"/>
+<br><input type="button" class="button" value="話す" onclick="new Audio('back_style_3_003.wav').play();speak()"/>
 </center>
 <script src="annyang.js"></script>
 <script>
 if (annyang) {
-  const commands = {
-    'クリスティーナ': () => { annyang.abort();new Audio('christina.mp3').play();var getTagId = document.getElementById("q");document.getElementById("q").innerHTML = "質問 : クリスティーナ";var getTagId = document.getElementById("a");document.getElementById("a").innerHTML = "答え : クリスティーナ?"; },
-    'お願い': () => { annyang.abort();new Audio('daga_kotowaru.ogg').play();var getTagId = document.getElementById("q");document.getElementById("q").innerHTML = "質問 : お願い";var getTagId = document.getElementById("a");document.getElementById("a").innerHTML = "答え : だが断る。";  }
-  };
-
-  annyang.addCommands(commands);
   function speak() {
   annyang.start();
+  var recognition = annyang.getSpeechRecognizer();
+    var final_transcript = '';
+    recognition.interimResults = true;
+    recognition.onresult = function(event) {
+        var interim_transcript = '';
+        final_transcript = '';
+        for (var i = event.resultIndex; i < event.results.length; ++i) {
+            if (event.results[i].isFinal) {
+                final_transcript += event.results[i][0].transcript;
+                console.log("final_transcript="+final_transcript);
+            } else {
+                interim_transcript += event.results[i][0].transcript;
+                console.log("interim_transcript="+interim_transcript);
+            }
+        }
+        var getTagId = document.getElementById("q");document.getElementById("q").innerHTML = "質問 : " + final_transcript;
+        if (final_transcript = "クリスティーナ") {
+          annyang.abort();new Audio('christina.mp3').play();var getTagId = document.getElementById("a");document.getElementById("a").innerHTML = "答え : クリスティーナ?";
+        }
+        else if (final_transcript = "お願い") {
+          annyang.abort();new Audio('daga_kotowaru.ogg').play();var getTagId = document.getElementById("a");document.getElementById("a").innerHTML = "答え : だが断る。";
+        }
+    };
+
+
   }
 }
 </script>
