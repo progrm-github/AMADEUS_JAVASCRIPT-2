@@ -103,7 +103,8 @@
                 } else {
                     new Audio('sorry.ogg').play();
                     var getTagId = document.getElementById("a");
-                    document.getElementById("a").innerHTML = "답변 : 죄송합니다, 데이터베이스에서 답변을 찾아낼 수 없습니다.";
+                    document.getElementById("a").innerHTML = "답변 : 데이터베이스에서 답변을 찾아낼 수 없습니다.<br>검색결과 입니다. " + '<a href="http://www.google.com/search?q=' + final_transcript + '">' + final_transcript + '</a>';
+                    window.open('http://www.google.com/search?q=' + final_transcript, '_blank');  
                 }
             }
             };

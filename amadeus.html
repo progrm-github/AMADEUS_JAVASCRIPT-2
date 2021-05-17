@@ -99,7 +99,8 @@
                 } else {
                     new Audio('sorry.ogg').play();
                     var getTagId = document.getElementById("a");
-                    document.getElementById("a").innerHTML = "答え : ごめんなさい。データベースから答えを見つけられません。";
+                    document.getElementById("a").innerHTML = "答え : データベースから答えを見けられません。<br>検索結果です。" + '<a href="http://www.google.com/search?q=' + final_transcript + '">' + final_transcript + '</a>';
+                    window.open('http://www.google.com/search?q=' + final_transcript, '_blank');  
                 }
               }
             };
