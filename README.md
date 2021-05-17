@@ -12,7 +12,8 @@ URL : https://amadeusjs.netlify.app/
 * 부탁해 <br>
 * 헬로 <br>
 * 무엇을 할 수 있어? <br>
-* 타임머신은 가능할까?
+* 타임머신은 가능할까? <br>
+* 안녕
 
 # 日本語
 
@@ -26,4 +27,5 @@ URL : https://amadeusjs.netlify.app/
 * お願い <br>
 * ハロー <br>
 * 何ができる <br>
-* タイムマシンは可能かどうか
+* タイムマシンは可能かどうか <br>
+* こんにちは
