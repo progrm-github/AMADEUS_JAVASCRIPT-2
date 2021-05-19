@@ -17,7 +17,7 @@ URL : https://amadeusjs.netlify.app/
 
 # 日本語
 
-ゲームシュタインズ・ゲートに出るAIアマデウスをコンセプトにする音声秘書システム
+ゲームシュタインズ・ゲートに登場するAIアマデウスをコンセプトにする音声秘書システム
 
 URL : https://amadeusjs.netlify.app/
 
