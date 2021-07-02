@@ -5,6 +5,7 @@
 게임 슈타인즈 게이트에 나오는 AI 아마데우스를 컨셉으로 하는 음성비서 시스템
 
 URL : https://amadeusjs.netlify.app/
+Discord Server : https://discord.gg/SXBeYcVyuM
 
 사용 가능 커맨드
 
