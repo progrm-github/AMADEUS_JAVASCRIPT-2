@@ -9,6 +9,7 @@
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
+        font-family: 'Nanum Myeongjo', serif;
     }
 
     body {
@@ -22,6 +23,10 @@
 </style>
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>
@@ -34,16 +39,16 @@
     <center>
         <br><br>
         <img src="kurisu_normal1.png" width="200" /><br><br>
-        <div id="q" style="color:white;">질문 : </div><br>
-        <div id="a" style="color:white;">답변 : </div>
+        <div id="q" style="color:white; font-family: 'Nanum Myeongjo', serif;">질문 : </div><br>
+        <div id="a" style="color:white; font-family: 'Nanum Myeongjo', serif;">답변 : </div>
         <br><input type="button" class="button" value="말하기" onclick="new Audio('back_style_3_003.wav').play();speak()" /><br>
         <footer>
             <br>
-            <a href='amadeus.html' style="color:white;;">日本語でも利用できます</a>
+            <a href='amadeus.html' style="color:white; font-family: 'Shippori Mincho B1', serif;">日本語でも利用できます</a>
             <br>
-          <p style="color:white; font-size: small;">Copyright © 2021 <a href="mailto: jmjeong10@Gmail.com" title="Contact Progrm">Progrm</a> All rights reserved.</p>
-          <p style="color:white; font-size: small;"><a href="https://github.com/progrm-github/AMADEUS_JAVASCRIPT-2">Github Repository</a></p>
-          <p style="color:white; font-size: small;"><a href="https://discord.gg/SXBeYcVyuM">Amadeus Discord Server</a></p>
+          <p style="color:white; font-size: small; font-family: 'Nanum Myeongjo', serif;">Copyright © 2021 <a href="mailto: jmjeong10@Gmail.com" title="Contact Progrm">Progrm</a> All rights reserved.</p>
+          <p style="color:white; font-size: small; font-family: 'Nanum Myeongjo', serif;"><a href="https://github.com/progrm-github/AMADEUS_JAVASCRIPT-2">Github Repository</a></p>
+          <p style="color:white; font-size: small; font-family: 'Nanum Myeongjo', serif;"><a href="https://discord.gg/SXBeYcVyuM">Amadeus Discord Server</a></p>
       </footer>
     </center>
 </body>
@@ -81,6 +86,14 @@
                     new Audio('daga_kotowaru.ogg').play();
                     var getTagId = document.getElementById("a");
                     document.getElementById("a").innerHTML = "답변 : 하지만 거절한다.";
+                } else if (final_transcript == "너는 누구야") {
+                    new Audio('hajimemashite.wav').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "답변 : 처음 뵙겠습니다. 마키세 크리스입니다.";
+                } else if (final_transcript == "누구야") {
+                    new Audio('hajimemashite.wav').play();
+                    var getTagId = document.getElementById("a");
+                    document.getElementById("a").innerHTML = "답변 : 처음 뵙겠습니다. 마키세 크리스입니다.";
                 } else if (final_transcript == "안녕") {
                     new Audio('hello.ogg').play();
                     var getTagId = document.getElementById("a");
